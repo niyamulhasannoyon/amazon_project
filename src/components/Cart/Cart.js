@@ -1,13 +1,15 @@
 import React from 'react';
 import './Cart.css';
 
+
 const Cart = (props) => {
     const cart = props.cart
     // const total = cart.reduce((total, prd ) => total + prd.price, 0);
     let total = 0;
     for (let i = 0; i< cart.length; i++) {
         const prd = cart[i];
-        total += prd.price;
+        total += prd.price * prd.quantity;
+        // debugger;
     }
 
     let shipping = 0;
@@ -36,7 +38,10 @@ const Cart = (props) => {
             <p><small>Shipping Cost: $ {shipping}</small></p>
             <p><small>Tax + VAT: $ {tax} </small></p>
             <p>Total Price: $ {grandTotal} </p>
-            <button className='product-btn'>Review</button>
+
+            {
+                props.children
+            }
         </div>
     );
 };

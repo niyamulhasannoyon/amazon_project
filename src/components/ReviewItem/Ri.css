@@ -1,0 +1,11 @@
+.products{
+    display: block;
+}
+.main-btn{
+    background-color: rgb(153, 239, 168);
+    width: 150px;
+    height: 30px;
+    border: 1px solid darkblue;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px gray;
+}
